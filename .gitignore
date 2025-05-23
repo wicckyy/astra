@@ -1,0 +1,60 @@
+# WordPress
+wp-admin/
+wp-includes/
+wp-content/plugins/
+wp-content/upgrade/
+wp-content/uploads/
+wp-content/cache/
+wp-content/backups/
+sitemap.xml
+sitemap.xml.gz
+latest.zip
+latest.tar.gz
+*.log
+wp-config.php
+
+# Astra theme specific
+# Ignore everything in the astra theme directory by default
+wp-content/themes/astra/*
+
+# Then, un-ignore specific essential files at the root of the theme
+!wp-content/themes/astra/style.css
+!wp-content/themes/astra/index.php
+!wp-content/themes/astra/functions.php
+!wp-content/themes/astra/screenshot.png
+!wp-content/themes/astra/readme.txt
+
+# Un-ignore essential directories (but not their entire contents initially)
+!wp-content/themes/astra/languages/
+!wp-content/themes/astra/inc/
+!wp-content/themes/astra/assets/
+!wp-content/themes/astra/template-parts/
+
+# Ignore the contents of inc and assets directories by default
+# This is to prevent "too many files" error.
+# If specific sub-files/folders are needed, they must be explicitly un-ignored.
+wp-content/themes/astra/inc/*
+wp-content/themes/astra/assets/*
+# For template-parts, it's common to have .php files, let's allow those.
+!wp-content/themes/astra/template-parts/*.php
+# For languages, .pot, .po, .mo files are common.
+!wp-content/themes/astra/languages/*.pot
+!wp-content/themes/astra/languages/*.po
+!wp-content/themes/astra/languages/*.mo
+
+
+# .gitkeep to ensure the directories themselves are tracked if empty
+!wp-content/themes/astra/.gitkeep
+!wp-content/themes/astra/languages/.gitkeep
+!wp-content/themes/astra/inc/.gitkeep
+!wp-content/themes/astra/assets/.gitkeep
+!wp-content/themes/astra/template-parts/.gitkeep
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
